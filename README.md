@@ -1,18 +1,51 @@
-# Simulação SEIR com Autômatos Celulares
+# Simulação Epidemiológica SEIRD em Grade Bidimensional
 
-## Descrição do Projeto
-Este projeto implementa uma simulação do modelo epidemiológico SEIR utilizando Autômatos Celulares em uma grade 2D para demonstrar a dinâmica espacial da propagação de doenças.
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
 
-## Instalação
-'''bash
-pip install numpy matplotlib
+## 📋 Descrição do Projeto
 
-### 3. Artigo Científico (Markdown)
-O artigo completo está disponível no arquivo `artigo_cientifico.md` anexo, estruturado com Resumo, Introdução, Metodologia (explicando a vantagem dos Autômatos Celulares), Discussão e Conclusão.
+Este projeto implementa uma simulação do modelo epidemiológico **SEIRD** (*Suscetível, Exposto, Infectado, Recuperado, Óbito*) utilizando o conceito de **Autômatos Celulares (CA)** em uma grade bidimensional.
 
-### 4. Dados para a Planilha
-| Nome do Projeto | IA Utilizada | Descrição da Complexidade |
-| :--- | :--- | :--- |
-| Simulação SEIR via Autômatos Celulares | Manus Lite | Alta. Implementa lógica SEIR espacializada com animação e gráficos. |
+Diferente dos modelos matemáticos tradicionais (equações diferenciais) que assumem uma mistura homogênea da população, esta abordagem modela as **interações locais**. Cada célula representa um indivíduo cuja evolução de saúde depende diretamente do estado de seus vizinhos, permitindo observar fenômenos espaciais como a formação de clusters e a propagação de ondas de infecção de forma muito mais realista.
 
-Os arquivos completos estão anexados para download direto.
+## ⚙️ Parâmetros da Simulação
+
+Você pode ajustar o comportamento da epidemia editando as variáveis no topo do arquivo `main.py`:
+
+| Parâmetro | Descrição |
+| :--- | :--- |
+| `GRID_SIZE` | Dimensão da grade (ex: 50 gera uma população de 2.500 agentes). |
+| `INFECTION_RATE` | Probabilidade de transmissão por contato direto com vizinho infectado. |
+| `INCUBATION_PERIOD` | Tempo médio (em dias) que o agente permanece como Exposto (E). |
+| `RECOVERY_RATE` | Taxa de saída do estado Infectado (I) para Recuperado ou Óbito. |
+| `MORTALITY_RATE` | Probabilidade de um agente infectado progredir para Óbito (D). |
+
+## 🎨 Representação Visual
+
+A grade utiliza as seguintes cores para identificar o estado atual de cada agente:
+
+| Cor | Estado | Sigla |
+| :--- | :--- | :---: |
+| ⬜ **Branco** | Suscetível | **S** |
+| 🟨 **Amarelo** | Exposto (Incubação) | **E** |
+| 🟥 **Vermelho** | Infectado (Transmissor) | **I** |
+| 🟩 **Verde** | Recuperado (Imune) | **R** |
+| ⬛ **Preto/Cinza** | Óbito | **D** |
+
+## 🚀 Instalação e Uso
+
+1. **Requisitos:** Certifique-se de ter o Python instalado.
+2. **Instale as dependências:**
+   ```bash
+   pip install numpy matplotlib
+
+## 📂 Estruturação de Arquivos
+├── main.py              # Código principal da simulação
+
+├── README.md            # Documentação do projeto
+
+├── requirements.txt     # Dependências do projeto
+
+└── artigo_tecnico.md # Detalhamento metodológico e resultados
