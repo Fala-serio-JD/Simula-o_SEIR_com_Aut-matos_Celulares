@@ -49,3 +49,28 @@ A grade utiliza as seguintes cores para identificar o estado atual de cada agent
 ├── requirements.txt     # Dependências do projeto
 
 └── artigo_tecnico.md # Detalhamento metodológico e resultados
+
+## 🧠 Metodologia de Desenvolvimento
+
+Este projeto foi concebido como uma demonstração técnica de **Engenharia de Software Assistida por IA**. O fluxo de trabalho simulou a atuação de um Engenheiro de Software Sênior e Especialista em Epidemiologia Computacional, utilizando a IA **Manus Lite** para a automação de ponta a ponta.
+
+### 📜 Prompt Utilizado
+O comando exato que gerou este código e documentação foi:
+
+> "Aja como um Engenheiro de Software Sênior e Especialista em Epidemiologia Computacional. Preciso que você resolva completamente uma atividade acadêmica de modelagem de doenças infectocontagiosas. O objetivo é demonstrar como o uso de IAs permite a criação de sistemas complexos de forma automatizada.
+>
+> Sua tarefa consiste em gerar 4 entregáveis em uma única resposta, sem a necessidade de anexos externos:
+> 1. **Código Python Completo:** Crie um código para simular o espalhamento de uma doença usando o Modelo SEIR (Suscetível, Exposto, Infectado, Removido) através de Autômatos Celulares em uma grade 2D.
+> 2. **Arquivo README.md Profissional:** Escreva um arquivo de documentação para o GitHub que inclua: Título, Descrição, Instalação, Parâmetros e esta seção de Metodologia.
+> 3. **Artigo Científico (Formato Markdown):** Estruturado com Resumo, Introdução, Metodologia (vizinhança de Moore/Von Neumann), Discussão de Resultados e Conclusão.
+> 4. **Dados para a Planilha:** Tabela resumindo Nome do Projeto, IA Utilizada e complexidade do código.
+>
+> **Instruções de Formatação:** Entregue cada parte em blocos de código separados para que eu possa copiar e colar diretamente nos arquivos do GitHub."
+
+### 🛠️ Ficha Técnica
+
+| Atributo | Detalhes |
+| :--- | :--- |
+| **Projeto** | Simulação Epidemiológica SEIRD |
+| **IA Utilizada** | Manus Lite |
+| **Complexidade** | Alta (Modelagem Estocástica em Grade 2D) |
